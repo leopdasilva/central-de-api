@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family:'Segoue-UI',sans-serif;
 }
 
 body{
@@ -21,12 +23,19 @@ body{
     width:40%;
     min-height:100vh;
 
-    background: linear-gradient(135deg, #111111, #1a1a1a, #0f0f0f);
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.45)
+        ),
+        url('../images/imagem_cidade.jpg');
+
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
 
     filter:grayscale(100%);
+    animation:zoomImagem 20s ease-in-out infinite alternate;
 }
 
 /* =========================
@@ -175,47 +184,51 @@ header p{
 }
 
 .cep{
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background-image: url("../images/cep.jpg");
 }
 
 .agify{
-    background: linear-gradient(135deg, #7b4397, #dc2430);
+    background-image: url("../images/agify.jpg");
 }
 
 .gender{
-    background: linear-gradient(135deg, #11998e, #38ef7d);
+    background-image: url("../images/gender.jpg");
 }
 
 .nationalize{
-    background: linear-gradient(135deg, #642b73, #c6426e);
+    background-image: url("../images/national.jpg");
 }
 
 .dog{
-    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    background-image: url("../images/dog.jpg");
 }
 
 .cat{
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-image: url("../images/cat.jpg");
 }
 
 .bored{
-    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    background-image: url("../images/bored.jpg");
 }
 
 .bitcoin{
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-image: url("../images/bitcoin.jpg");
 }
 
 .dolar{
-    background: linear-gradient(135deg, #232526, #414345);
+    background-image: url("../images/dolar.jpg");
 }
 
 .ip{
-    background: linear-gradient(135deg, #4568dc, #b06ab3);
+    background-image: url("../images/ip.jpg");
 }
 
 .rick{
-    background: linear-gradient(135deg, #42275a, #734b6d);
+    background-image: url("../images/rick.jpg");
+}
+
+.musica {
+    background-image: url("../images/musica.webp");
 }
 
 /* =========================
@@ -260,29 +273,71 @@ header p{
    RESPONSIVO
 ========================= */
 
-@media(max-width:900px){
-
-    body{
-        flex-direction:column;
+@media (max-width: 900px) {
+    
+    body {
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden; /* Evita scrolls laterais fantasmas */
     }
 
-    .lado-imagem{
-        width:100%;
-        height:260px;
-        min-height:260px;
+    /* 1. Otimização do Topo (Antiga imagem lateral) */
+    .lado-imagem {
+        width: 100%;
+        height: 180px;      /* Reduzido de 260px para dar mais espaço ao conteúdo */
+        min-height: 180px;
+        background-attachment: scroll; /* Desativa parallax se houver, melhora performance no celular */
     }
 
-    .conteudo{
-        width:100%;
-        padding:25px;
+    /* 2. Área de Conteúdo principal */
+    .conteudo {
+        width: 100%;
+        padding: 20px 16px; /* Ajustado para dar mais área útil horizontal */
+        box-sizing: border-box;
     }
 
-    header h1{
-        font-size:2.3rem;
+    /* 3. Tipografia confortável */
+    header {
+        margin-bottom: 20px;
     }
 
-    .container{
-        grid-template-columns:1fr;
+    header h1 {
+        font-size: 2rem; /* 2.3rem costuma quebrar linha de forma feia em telas menores */
+        line-height: 1.2;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    /* 4. Campo de Busca Dinâmico */
+    .campo {
+        flex-direction: column; /* Se o input e botão estavam lado a lado, agora empilham */
+        gap: 12px;
+        width: 100%;
+    }
+
+    /* Otimização para o toque (Touch Targets) */
+    .campo input, 
+    .campo button {
+        width: 100%;
+        height: 48px;        /* Altura ideal recomendada pela Google para cliques com o dedão */
+        font-size: 1rem;     /* Evita que o iOS dê zoom automático indesejado no input */
+        box-sizing: border-box;
+    }
+
+    /* 5. Resultados e Grid */
+    .container, .consulta {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Ajuste fino na imagem da capa do álbum */
+    #capaAlbum {
+        max-width: 100%;     /* Garante que a capa nunca morda as bordas da caixinha */
+        height: auto;
+        margin: 15px auto 0 auto;
+        display: block;      /* Centraliza a imagem na caixinha */
     }
 }
 
@@ -482,4 +537,51 @@ header p{
 .resultado .item:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================================
+   LINK GITHUB
+=========================================== */
+
+.link-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+/* Tamanho do ícone SVG */
+.icon-github {
+    width: 20px;
+    height: 20px;
+}
+
+/* Efeito de hover (passar o mouse) */
+.link-github:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Efeito de clique */
+.link-github:active {
+    transform: translateY(0);
+}
+
+footer {
+    display: flex;
+    justify-content: center; /* Centraliza o botão na tela */
+    margin-top: 40px;        /* Dá um respiro confortável em relação aos cards */
+    width: 100%;
 }
