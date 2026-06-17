@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
                    onmouseover="this.style.transform='translateY(-2px)'; this.style.background='#dc2626';"
                    onmouseout="this.style.transform='translateY(0)'; this.style.background='#ef4444';"
                 >
-                    📺 Abrir Clipe Direto no YouTube
+                    📺 Assistir Clipe
                 </a>
             `;
         }
