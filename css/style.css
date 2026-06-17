@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body{
@@ -23,19 +21,12 @@ body{
     width:40%;
     min-height:100vh;
 
-    background:
-        linear-gradient(
-            rgba(0,0,0,.45),
-            rgba(0,0,0,.45)
-        ),
-        url('../images/imagem_cidade.jpg');
-
+    background: linear-gradient(135deg, #111111, #1a1a1a, #0f0f0f);
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
 
     filter:grayscale(100%);
-    animation:zoomImagem 20s ease-in-out infinite alternate;
 }
 
 /* =========================
@@ -184,47 +175,47 @@ header p{
 }
 
 .cep{
-    background-image: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
 }
 
 .agify{
-    background-image: url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
+    background: linear-gradient(135deg, #7b4397, #dc2430);
 }
 
 .gender{
-    background-image: url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: linear-gradient(135deg, #11998e, #38ef7d);
 }
 
 .nationalize{
-    background-image: url("https://images.unsplash.com/photo-1529070538774-1843cb3265df");
+    background: linear-gradient(135deg, #642b73, #c6426e);
 }
 
 .dog{
-    background-image: url("https://images.unsplash.com/photo-1517849845537-4d257902454a");
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
 }
 
 .cat{
-    background-image: url("https://images.unsplash.com/photo-1511044568932-338cba0ad803");
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
 .bored{
-    background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
 }
 
 .bitcoin{
-    background-image: url("https://images.unsplash.com/photo-1621761191319-c6fb62004040");
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
 .dolar{
-    background-image: url("https://images.unsplash.com/photo-1631514623777-29d463eb10f0?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: linear-gradient(135deg, #232526, #414345);
 }
 
 .ip{
-    background-image: url("https://images.unsplash.com/photo-1675495277087-10598bf7bcd1?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: linear-gradient(135deg, #4568dc, #b06ab3);
 }
 
 .rick{
-    background-image: url("https://images.unsplash.com/photo-1733187058301-019ae0f92a94?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: linear-gradient(135deg, #42275a, #734b6d);
 }
 
 /* =========================
@@ -445,3 +436,50 @@ header p{
     color:#e5e7eb;
 }
 
+/* =========================================
+   ESTILOS EXCLUSIVOS - RICK AND MORTY
+=========================================== */
+
+/* Classes dinâmicas de Status */
+.status-vivo {
+    color: #4ade80 !important; /* Verde neon */
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.2);
+}
+
+.status-morto {
+    color: #f87171 !important; /* Vermelho neon */
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(248, 113, 113, 0.2);
+}
+
+.status-desconhecido {
+    color: #9ca3af !important; /* Cinza */
+    font-weight: 600;
+}
+
+/* Melhoria no container da imagem do personagem */
+#imagem {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#imagem:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ajuste sutil para o grid de resultados ficar mais harmônico */
+.resultado .item {
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.resultado .item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
