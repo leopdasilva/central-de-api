@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação do Dólar</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="lado-imagem"></div>
+
+    <div class="conteudo">
+
+        <a href="../index.html" class="voltar">
+            ← Voltar ao Menu
+        </a>
+
+        <header>
+            <h1>Cotação do Dólar</h1>
+            <p>AwesomeAPI</p>
+        </header>
+
+        <section class="consulta">
+
+            <div class="campo">
+                <button id="btnConsultar">
+                    Consultar Cotação
+                </button>
+            </div>
+
+            <div class="resultado">
+
+                <div class="item">
+                    <span class="titulo">Cotação Atual</span>
+                    <span id="cotacao">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Cotação Máxima</span>
+                    <span id="maxima">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Cotação Mínima</span>
+                    <span id="minima">-</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="scripts/api-dolar.js"></script>
+
+</body>
+</html>

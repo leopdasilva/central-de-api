@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty API</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="lado-imagem"></div>
+
+    <div class="conteudo">
+
+        <a href="../index.html" class="voltar">
+            ← Voltar ao Menu
+        </a>
+
+        <header>
+            <h1>Rick and Morty</h1>
+            <p>Consulta de Personagem</p>
+        </header>
+
+        <section class="consulta">
+
+            <div class="campo">
+
+                <input
+                    type="number"
+                    id="idPersonagem"
+                    placeholder="Digite o ID do personagem (ex: 1)"
+                >
+
+                <button id="btnBuscar">
+                    Buscar Personagem
+                </button>
+
+            </div>
+
+            <div class="resultado">
+
+                <div class="item">
+                    <span class="titulo">Nome</span>
+                    <span id="nome">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Status</span>
+                    <span id="status">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Espécie</span>
+                    <span id="especie">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Gênero</span>
+                    <span id="genero">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Imagem</span>
+                    <img id="imagem" alt="Personagem" style="display:none; width:200px; border-radius:15px; margin-top:10px;">
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="scripts/api-rick.js"></script>
+
+</body>
+</html>

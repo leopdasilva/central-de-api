@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="lado-imagem"></div>
+
+    <div class="conteudo">
+
+        <a href="../index.html" class="voltar">
+            ← Voltar ao Menu
+        </a>
+
+        <header>
+            <h1>Consulta CEP</h1>
+            <p>ViaCEP API</p>
+        </header>
+
+        <section class="consulta">
+
+            <div class="campo">
+                <input
+                    type="text"
+                    id="cep"
+                    placeholder="Digite um CEP"
+                >
+
+                <button id="btnConsultar">
+                    Consultar
+                </button>
+            </div>
+
+            <div class="resultado">
+
+                <div class="item">
+                    <span class="titulo">Logradouro</span>
+                    <span id="logradouro">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Bairro</span>
+                    <span id="bairro">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Cidade</span>
+                    <span id="cidade">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Estado</span>
+                    <span id="estado">-</span>
+                </div>
+
+            </div>
+
+            <div class="mapa-container">
+
+                <h2>Localização</h2>
+            
+                <iframe
+                    id="mapa"
+                    src=""
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="scripts/api-cep.js"></script>
+
+</body>
+</html>

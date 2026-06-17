@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog CEO API</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="lado-imagem"></div>
+
+    <div class="conteudo">
+
+        <a href="../index.html" class="voltar">
+            ← Voltar ao Menu
+        </a>
+
+        <header>
+            <h1>Imagem Aleatória de Cachorro</h1>
+            <p>Dog CEO API</p>
+        </header>
+
+        <section class="consulta">
+
+            <div class="campo">
+                <button id="btnBuscar">
+                    Buscar Cachorro
+                </button>
+            </div>
+
+            <div class="resultado">
+
+                <div class="item">
+
+                    <span class="titulo">
+                        Cachorro Aleatório
+                    </span>
+
+                    <img
+                        id="imagemDog"
+                        src=""
+                        alt="Imagem de cachorro"
+                        style="
+                            width:100%;
+                            max-width:500px;
+                            display:none;
+                            margin-top:15px;
+                            border-radius:15px;
+                        "
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="scripts/api-dog.js"></script>
+
+</body>
+</html>

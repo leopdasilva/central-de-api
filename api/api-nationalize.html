@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationalize API</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="lado-imagem"></div>
+
+    <div class="conteudo">
+
+        <a href="../index.html" class="voltar">
+            ← Voltar ao Menu
+        </a>
+
+        <header>
+            <h1>Estimativa de Nacionalidade</h1>
+            <p>Nationalize API</p>
+        </header>
+
+        <section class="consulta">
+
+            <div class="campo">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite um nome"
+                >
+
+                <button id="btnConsultar">
+                    Consultar
+                </button>
+
+            </div>
+
+            <div class="resultado">
+
+                <div class="item">
+                    <span class="titulo">Nome</span>
+                    <span id="resultadoNome">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">País Mais Provável</span>
+                    <span id="pais">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Probabilidade</span>
+                    <span id="probabilidade">-</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="scripts/api-nationalize.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do IP</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="lado-imagem"></div>
+
+    <div class="conteudo">
+
+        <a href="../index.html" class="voltar">
+            ← Voltar ao Menu
+        </a>
+
+        <header>
+            <h1>Informações do IP</h1>
+            <p>IP API</p>
+        </header>
+
+        <section class="consulta">
+
+            <div class="campo">
+                <button id="btnConsultar">
+                    Consultar Meu IP
+                </button>
+            </div>
+
+            <div class="resultado">
+
+                <div class="item">
+                    <span class="titulo">Cidade</span>
+                    <span id="cidade">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">Estado</span>
+                    <span id="estado">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">País</span>
+                    <span id="pais">-</span>
+                </div>
+
+                <div class="item">
+                    <span class="titulo">IP externo</span>
+                    <span id="ip">-</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="scripts/api-ip.js"></script>
+
+</body>
+</html>
