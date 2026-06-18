@@ -19,13 +19,25 @@
         </header>
 
         <section class="consulta">
-            <div class="campo">
+            
+            <div class="campo acoes-busca">
                 <input 
                     type="text" 
                     id="nomeMusica" 
                     placeholder="Digite o nome da música (ex: Chop Suey)"
                 >
                 <button id="btnBuscar">Buscar Música</button>
+            </div>
+
+            <div id="wrapperAudio" class="busca-audio-wrapper">
+                <button type="button" id="btnAudio" class="btn-audio" title="Identificar por áudio">
+                    <svg class="icon-microfone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                        <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
+                        <line x1="12" y1="19" x2="12" y2="22"/>
+                    </svg>
+                </button>
+                <span id="statusAudio" class="status-audio"></span>
             </div>
 
             <div class="resultado">
